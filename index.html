@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Sentiment Analysis App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0e68c; /* Pale goldenrod background */
+            padding-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        textarea {
+            width: 80%;
+            height: 100px;
+            margin-top: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4682b4; /* Steel blue submit button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #5f9ea0; /* Darker steel blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Sentiment Analysis App</h1>
+    <form action="/predict" method="post">
+        <label for="user_input">Enter text here:</label>
+        <br>
+        <textarea id="user_input" name="user_input" rows="4" cols="50"></textarea>
+        <br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

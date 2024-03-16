@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #87cefa; /* Light sky blue background */
+            padding-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        .review {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        .positive {
+            color: green;
+        }
+        .negative {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    {% if error %}
+        <p>{{ error }}</p>
+    {% else %}
+        <h1>Sentiment</h1>
+        <p class="review">
+            {% if sentiment == "Positive Review" %}
+                Positive Review 😊 <!-- Happy emoji for positive sentiment -->
+            {% elif sentiment == "Negative Review" %}
+                Negative Review 😞 <!-- Sad emoji for negative sentiment -->
+            {% else %}
+                {{ sentiment }} <!-- Display the sentiment text if not recognized -->
+            {% endif %}
+        </p>
+    {% endif %}
+</body>
+</html>
